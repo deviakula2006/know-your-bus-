@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Hero Background */
+.hero {
+  background-image:url(bus1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+}
+
+.content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+}
+
+.site-title {
+  font-size: 2.2rem;
+  color: #fbd436;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+/* 
+/* CTA Buttons */
+.cta-button {
+  background: linear-gradient(45deg, #cf9919, #b3370e);
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.cta-button:hover {
+  background: linear-gradient(45deg, #0072ff, #6f1c53);
+  transform: scale(1.05);
+}
+
+.cta-button.small {
+  font-size: 0.9rem;
+  padding: 10px 20px;
+} */
+
+
+
+
+
+/* Auth buttons below Get Started */
+.auth-buttons {
+  margin-top: 20px;
+}
+
+/* Signup Form */
+.signup-form {
+  position: fixed;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#signup-toggle:checked ~ .signup-form {
+  display: flex;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+/* SignUp Form Box */
+.form-box {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}

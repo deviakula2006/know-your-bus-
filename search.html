@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Know Your Bus - Home</title>
+  <link rel="stylesheet" href="search.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+   <header>
+    <div class="logo">
+      <i class="fas fa-bus"></i>
+      <span>Know Your Bus</span>
+    </div>
+
+    <div class="profile-menu">
+      <input type="checkbox" id="profile-toggle" />
+      <label for="profile-toggle" class="profile-icon">
+        <i class="fas fa-user-circle"></i>
+      </label>
+
+       <div class="profile-dropdown">
+        <a href="profile.html">Profile</a>
+        <a href="edit.html">Edit Profile</a>
+        <a href="home.html">Logout</a>
+        
+      </div>
+    </div>
+  </header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+
+
+  <main>
+    <h2>Welcome to Know Your Bus!</h2>
+    <p>Find bus timings, routes, and parking info easily.</p>
+
+    <div class="search-wrapper">
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" placeholder="Enter Bus Number or Location" class="search-input" />
+      </div>
+     
+      <a href="bus-info.html" class="get-details-btn">Get Bus Details</a>
+
+    </div>
+  </main>
+</body>
+</html>

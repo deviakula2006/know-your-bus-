@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bus Information</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <style>
+    /* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #003366;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: #ffd700;
+  font-weight: 700;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo i {
+  font-size: 36px;
+}
+
+.profile-menu {
+  position: relative;
+}
+
+#profile-toggle {
+  display: none;
+}
+
+.profile-icon {
+  font-size: 36px;
+  color: #ffd700;
+  cursor: pointer;
+  user-select: none;
+}
+
+.profile-dropdown {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: #003366;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.3);
+  min-width: 180px;
+  overflow: hidden;
+  z-index: 20;
+}
+
+#profile-toggle:checked + .profile-icon + .profile-dropdown {
+  display: flex;
+}
+
+.profile-dropdown a {
+  padding: 14px 20px;
+  color: #ffd700;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #ffd700;
+  transition: background-color 0.3s ease;
+}
+
+.profile-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.profile-dropdown a:hover {
+  background-color: #ffd700;
+  color: #003366;
+}
+
+/* Main container */
+.container {
+  max-width: 700px;
+  background-color: #ffffffdd;
+  margin: 50px auto;
+  border-radius: 16px;
+  padding: 35px 40px;
+  box-shadow: 0 12px 25px rgb(0 0 0 / 0.15);
+  backdrop-filter: saturate(180%) blur(15px);
+}
+
+/* Page Title */
+.page-title {
+  font-family: Sans-Serif;
+  font-size: 2.0rem;
+  font-weight: 700;
+  text-align: center;
+  color: #003366;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #003366 25%, #ffffff 50%, #003366 75%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 10s infinite;
+
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Bus info card */
+.bus-info-card {
+  background: #e0f0ff;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.45);
+  transition: box-shadow 0.3s ease;
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+/* Glow animation */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 8px 20px rgba(0, 119, 182, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 25px 6px rgba(0, 119, 182, 0.7);
+  }
+}
+
+/* Info rows */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #a9d0f5;
+  font-size: 1.1rem;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 700;
+  color: #005082;
+}
+
+.value {
+  color: #00304d;
+  font-weight: 600;
+}
+
+/* Navigation */
+.main-nav {
+  background-color: #FFFF00;
+  padding: 10px 0;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 0px;
+}
+
+.main-nav ul li a {
+  color: #003366;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  background-color: white;
+  color: #003366;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fas fa-bus"></i>
+      <span>Know Your Bus</span>
+    </div>
+
+    <div class="profile-menu">
+      <input type="checkbox" id="profile-toggle" />
+      <label for="profile-toggle" class="profile-icon">
+        <i class="fas fa-user-circle"></i>
+      </label>
+
+       <div class="profile-dropdown">
+        <a href="profile.html">Profile</a>
+        <a href="edit.html">Edit Profile</a>
+        <a href="home.html">Logout</a>
+        
+      </div>
+    </div>
+  </header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <main class="container">
+    <h1 class="page-title">Buses Available</h1>
+
+    <section class="bus-info-card">
+      <h2 class="bus-title">Bus Number: 223</h2>
+      <div class="info-row">
+        <span class="label">Route:</span>
+        <span class="value">Lalcheruvu Road</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Parking Ground:</span>
+        <span class="value">Kakinada ground near Ball Canteen</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Pickup Time (Morning):</span>
+        <span class="value">7:20 AM</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Evening Bus Start Time:</span>
+        <span class="value">4:30 PM</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Driver Name:</span>
+        <span class="value">Ramesh</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Driver Contact:</span>
+        <span class="value">1234567890</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+

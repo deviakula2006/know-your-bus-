@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Know Your Bus - Login</title>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <!-- Google Fonts -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- <link href="C:\Users\hp\OneDrive\Desktop\project\html\final.css" rel="stylesheet"> -->
+  <style>/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom right, #d3f3ff, #ffe9b6); /* Soft gradient background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+header {
+  background-color: #e1973c; /* Dark blue */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #f8f8f5; /* golden yellow */
+}
+
+.logo i {
+  margin-right: 10px;
+  font-size: 32px;
+}
+
+.profile-menu {
+  position: relative;
+}
+
+/* Hide the checkbox */
+#profile-toggle {
+  display: none;
+}
+
+/* Profile icon style */
+.profile-icon {
+  font-size: 36px;
+  color: #FFD700;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Dropdown menu hidden by default */
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #003366;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  min-width: 160px;
+  z-index: 10;
+}
+
+/* Show dropdown when checkbox checked */
+#profile-toggle:checked + .profile-icon + .profile-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown links */
+.profile-dropdown a {
+  color: #FFD700;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-bottom: 1px solid #FFD700;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.profile-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.profile-dropdown a:hover {
+  background-color: #FFD700;
+  color: #003366;
+}
+/* .main-nav {
+  background-color:#ffd966;
+  padding: 10px 0;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 0px;
+}
+
+.main-nav ul li a {
+  color: #c4774e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  background-color: white;
+  color: #dc9d6c;
+} */
+
+
+
+
+
+.login-wrapper {
+  display: flex;
+  max-width: 900px;
+  margin: 80px auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.login-image {
+  flex: 1;
+  background: #dceefc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.login-container {
+  flex: 1;
+  padding: 40px;
+  background-color: #fffdf5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-container h2 {
+  color: #ff9900;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #ffd966;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #ffc107;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffd54f;
+  color: #333;
+  margin-top: auto;
+}
+</style>
+</head>
+<body>
+ 
+  <header>
+    <div class="logo">
+      <i class="fas fa-bus"></i>
+      <span>Know Your Bus</span>
+    </div>
+
+    <div class="profile-menu">
+      <input type="checkbox" id="profile-toggle" />
+      <label for="profile-toggle" class="profile-icon">
+        <i class="fas fa-user-circle"></i>
+      </label>
+
+      <div class="profile-dropdown">
+        <a href="profile.html">Profile</a>
+        <a href="edit.html">Edit Profile</a>
+        <a href="home.html">Logout</a>
+        
+      </div>
+    </div>
+  </header>
+ 
+
+
+  <main>
+  <div class="login-wrapper">
+    <div class="login-image">
+      <img src="bus 3.webp" alt="Bus Illustration" />
+    </div>
+
+    <div class="login-container">
+      <h2>Welcome Back</h2>
+      <form>
+        <label for="roll">Roll Number</label>
+        <input type="text" id="roll" name="roll" maxlength="10" placeholder="Enter your roll number" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+        <a href="search.html" class="button">Login</a>
+      </form>
+    </div>
+  </div>
+</main>
+
+
+
+  <footer>
+    <p>&copy; 2025 Know Your Bus</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Know Your Bus</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <header class="site-header">
+    <i class="fas fa-bus-alt" style="font-size:26px;color:yellow"></i> 
+    <h1 class="site-title">KNOW YOUR BUS</h1>
+  </header>
+
+  <section class="hero">
+    <div class="content">
+      <h2>Find Your College Bus Easily</h2>
+      <p>Search by stop or bus number to know timings, driver contact, stop info, and ground placement.</p>
+
+
+
+
+      <div class="auth-buttons">
+        <a href="login.html" class="cta-button small">Login</a>
+        <label for="signup-toggle" class="cta-button small">Sign Up</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hidden checkbox to control signup form -->
+  <input type="checkbox" id="signup-toggle" hidden />
+
+  <div class="signup-form">
+    <label for="signup-toggle" class="overlay"></label>
+    <div class="form-box">
+      <h2>Create Your Profile</h2>
+      <input type="text" placeholder="Full Name" />
+      <input type="email" placeholder="Email" />
+      <input type="number" placeholder="Roll Number" />
+      <input type="text" placeholder="Bus Number" />
+      <input type="text" placeholder="Stop Name" />
+      <input type="password" placeholder="Password" />
+      <label for="signup-toggle" class="cta-button small">Back to Home</label>
+    </div>
+  </div>
+
+</body>
+</html>

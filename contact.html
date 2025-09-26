@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Support</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="contact.css">
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+}
+
+header {
+  background-color: #003366; /* Dark blue */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styling */
+
+
+
+.profile-menu {
+  position: relative;
+}
+
+/* Hide the checkbox */
+#profile-toggle {
+  display: none;
+}
+
+/* Profile icon style */
+.profile-icon {
+  font-size: 36px;
+  color: #FFD700;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Dropdown menu hidden by default */
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #003366;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  min-width: 160px;
+  z-index: 10;
+}
+
+/* Show dropdown when checkbox checked */
+#profile-toggle:checked + .profile-icon + .profile-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dropdown links */
+.profile-dropdown a {
+  color: #FFD700;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-bottom: 1px solid #FFD700;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.profile-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.profile-dropdown a:hover {
+  background-color: #FFD700;
+  color: #003366;
+}
+
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  background-color: #d9f3f0;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #4a148c;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+}
+
+.value {
+  color: #555;
+}
+
+.note {
+  font-family: 0.95em;
+  color: red;
+  border-radius: 10px;
+  box-shadow: 5px;
+  position: sticky;
+  left: 10px;
+  bottom: 40px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: grey;
+  font-size: 0.95em;
+
+
+
+
+} .main-nav {
+  background-color: #FFFF00;
+  padding: 0px 0;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 0px;
+}
+
+.main-nav ul li a {
+  color: #c4774e;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 5px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  background-color: white;
+  color: #dc9d6c;
+}
+
+
+  </style>
+</head>
+<body>
+
+  
+
+    <header>
+    <div class="logo">
+      <i class="fas fa-bus"></i>
+      <span>Know Your Bus</span>
+    </div>
+
+    <div class="profile-menu">
+      <input type="checkbox" id="profile-toggle" />
+      <label for="profile-toggle" class="profile-icon">
+        <i class="fas fa-user-circle"></i>
+      </label>
+
+      <div class="profile-dropdown">
+        <a href="profile.html">Profile</a>
+        <a href="edit.html">Edit Profile</a>
+        <a href="home.html">Logout</a>
+        
+      </div>
+    </div>
+  </header>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="container">
+    <h2>If you have any queries</h2>
+
+    <div class="info-row">
+      <span class="label">Supervisor Name:</span>
+      <span class="value">Mr. Rajesh Kumar</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Mobile Number:</span>
+      <span class="value">9876543210</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Landline:</span>
+      <span class="value">0884-123456</span>
+    </div>
+
+    <div class="info-row">
+      <span class="label">Email:</span>
+      <span class="value">support@campusbus.in</span>
+    </div>
+<div class="note"><strong>Note! :</strong> Kindly contact only when necessary.</div>
+    <div class="footer">We're here to help you anytime.</div>
+  </div>
+
+</body>
+</html>
